@@ -40,8 +40,5 @@ docker build -t amozoro1/angular-app .
 	7.2) Run container
 	docker-compose up
 
-8) Push project to GitHub
-	
-	
-	
-
+8) Push project to GitHub: https://github.com/albmozo/simplilearn-devops-lab
+		
