@@ -1,0 +1,47 @@
+1) Run a Ubuntu environment
+
+2) Install a demo angular-app in folder > angular-app
+
+	2.1) Install angular-cli
+	npm install -g @angular/cli
+	
+	2.2) Init new angular app
+	ng new angular-app
+	
+3) Create Dockerfile
+
+4) Create docker image:
+docker build -t amozoro1/angular-app .
+
+5) Test locally docker image
+
+	5.1) Run docker image
+	docker run -d -it -p 80:80/tcp --name angular-app albmozo/angular-app:latest
+	
+	5.2) Get IP address for checking locally that app is runing
+	docker inspect angular-app | grep Address
+	http://<IP-Address>:4200
+
+6) Push docker image to Docker Hub: https://hub.docker.com/repository/docker/amozoro1/devops-project/
+
+	6.1) Tag docker image
+	docker image tag amozoro1/angular-app:latest amozoro1/devops-project:latest
+	
+	6.2) Login into Docker Hub account
+	docker login
+	
+	6.2) Push docker image
+	docker push amozoro1/devops-project:latest
+	
+7) Add docker compose
+	
+	7.1) Create docker-compose.yml
+	
+	7.2) Run container
+	docker-compose up
+
+8) Push project to GitHub
+	
+	
+	
+

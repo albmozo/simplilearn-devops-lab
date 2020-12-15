@@ -1,0 +1,9 @@
+version: '2'
+services:
+
+    node:
+        image: amozoro1/devops-project
+        restart: always
+        container_name: angular-app
+        ports:
+            - 4200:4200
